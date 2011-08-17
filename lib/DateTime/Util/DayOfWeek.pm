@@ -1,10 +1,11 @@
 package DateTime::Util::DayOfWeek;
 use strict;
 use warnings;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 {
-    package DateTime;
+    package # hide from pause
+        DateTime;
     sub is_monday    { shift->day_of_week == 1 }
     sub is_tuesday   { shift->day_of_week == 2 }
     sub is_wednesday { shift->day_of_week == 3 }
